@@ -1,12 +1,12 @@
-from django.shortcuts import render, render_to_response, get_object_or_404
-from blog import models
+from django.shortcuts import render, HttpResponse
+from blog.models import Category,Blog
 
 # Create your views here.
-def post_list(request):
-    return render(request,'blog/post_list.html')
+def login(request):
+    return render(request,'blog/login.html')
 
-def index(request):
-    return render_to_response('index.html', {
-        'categories': Category.objects.all(),
-        'posts': Blog.objects.all()[:5]
-    })
+def contactus(request):
+    return render (request,'blog/contactus.html')
+
+def home(request):
+    return render(request,'blog/home.html')

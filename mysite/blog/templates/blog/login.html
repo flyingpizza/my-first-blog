@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  
+  
+
+      <!--<link rel="stylesheet" href="css/login_style.css">-->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/login_style.css'%}">
+
+  
+</head>
+
+<body>
+  <div class="overlay">
+</div>
+<div class="leftcontent">
+  <span class="ltitle">Access More</span>
+  <br>
+  <span class="lcontent">
+    With Citus, you can unleash your desktop, and let the powers of desktop widgets come to life! Even though Citus is free, we still need to store user-specific information, like which widgets you have installed, and where they are positioned. By logging in, we can save that information to your account, and allow you to have a better experience overall.<br><br>Just login on the right to access your dashboard where you can add, edit, and remove widgets!
+  </span>
+</div>
+<div class="sidebar">
+  <span class="rtitle">Login</span>
+  <br>
+  <br>
+  <form method="post">{% csrf_token %}
+    <input class="textinput" type="text" name="username" autofocus="autofocus" placeholder="Username" style="background: black;">
+    <br>
+    <br>
+    <input class="textinput" type="password" name="password" placeholder="Password" style="background: black;"  >
+    <br>
+    <br>
+    <button class="submit" type="submit">
+      <img src="http://www.yachtsale.se/wp-content/themes/Yachtsales/images/arrow-right.png" height="24px" />
+    </button>
+  </form>
+</div>
+  
+  
+</body>
+</html>
